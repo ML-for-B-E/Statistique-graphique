@@ -1,0 +1,130 @@
+\documentclass[10pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{subcaption}
+\usepackage{soul}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usetheme[secheader]{Boadilla}
+
+\usefonttheme[onlylarge]{structurebold}
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+
+\tikzstyle{noeud}=[minimum width=2.5cm,minimum height=1.5cm,
+rectangle,rounded corners=10pt,draw,
+fill=blue!5,text=black,font=\footnotesize,text width=2cm,text justified]
+\tikzstyle{noeud1}=[minimum width=2.5cm,minimum height=1.1cm,
+rectangle,rounded corners=10pt,draw,
+fill=green!5,text=black,font=\small,text width=2cm,text centered]
+\tikzstyle{varType}=[minimum width=1.5cm,minimum height=0.75cm,
+rectangle,rounded corners=10pt,draw,
+fill=green!15,text=black,font=\small,text width=2cm,text centered]
+
+\tikzstyle{fleche}=[->,>= stealth,thick]
+
+\title{Statistique Graphique}
+\subtitle{EEIA 2024}
+\author{Par ...} 
+\institute[1]{
+      \begin{minipage}{0.1\textwidth}
+       \includegraphics[width=1.6\textwidth, height=1.6\textwidth]{{../../figures/logoFV.jpg}}
+       \end{minipage}
+       \hspace{0.1\textwidth}
+             \begin{minipage}{0.1\textwidth}
+             \includegraphics[width=1.6\textwidth, height=1.6\textwidth]{{../../figures/logoBE.png}}
+       \end{minipage}
+       \hspace{0.1\textwidth}
+      \begin{minipage}{0.1\textwidth}
+       \includegraphics[width=1.6\textwidth, height=1.6\textwidth]{{../../figures/Fondation_de_France.png}}
+\end{minipage}
+}
+
+\date[Godomey 2024]{ \\  Godomey, le 29 juillet 2024 }
+
+
+
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle {Statistique Graphique}
+
+\begin{columns}
+    \begin{column}{0.48\textwidth}
+        \begin{block}{Définition}
+\small {\begin{itemize}
+\item \textbf{Un graphique statistique} : figure fondée sur des données recueillies dans des populations ou des échantillons – Représentation visuelle des variables d’une population
+\item Variation \textbf{nouvelle ou inattendue} mise en lumière par la représentation en partant de données complexes
+\end{itemize}}
+\end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+    \begin{center}
+      \begin{tikzpicture}  
+      \node[noeud] (F) at (0,2.3) { Forme de la distribution};
+      \node[noeud] (E) at (0,0) { Evolution dans le temps};
+      \node[noeud] (R) at (2.7,0) { Relation entre des données};
+      \node[noeud] (D) at (2.7,2.3) { Différence entre plusieurs groupes};
+      \node[noeud1] (D) at (1.35,1.15) { Variation intéressante pour le lecteur};
+	
+        \end{tikzpicture}
+      \end{center}
+    \end{column}
+\end{columns} 
+
+\begin{block}{Objectifs}
+\small {\begin{itemize}
+\item \textbf{Synthétiser} : En présence de nombreuses données, le cerveau humain a beaucoup de mal à en dégager la configuration. En revanche, avec une représentation visuelle, tout s'éclaire en une seconde !
+\item \textbf{Dimension visuelle} : Mémorisation plus simple des faits illustrés car 60 \% de visuels parmi les humains et parce que les faits présentés sont sélectionnés
+\item \st{Accompagne un ou des tableau}
+\end{itemize}}
+\end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle {Base de données}
+\begin{block}{Définition}
+\small {\begin{itemize}
+\item Population
+\item Attribut/Variable
+\end{itemize}}
+\end{block}
+\begin{tikzpicture}
+\node[noeud1] (F) at (0,0) {Variables};
+\node[varType] (Q) at (3,1) {Quantitatives};
+\node[varType] (QC) at (6,2) {Continues};
+\node[varType] (QD) at (6,1) {Discrètes};
+
+\node[varType] (L) at (3,-1) {Qualitatives};
+\node[varType] (LO) at (6,-1) {Ordinales};
+\node[varType] (LN) at (6,-2) {Nominales};
+\draw[fleche] (F)--(Q);
+\draw[fleche] (F)--(L);
+\draw[fleche] (Q)--(QC);
+\draw[fleche] (Q)--(QD);
+\draw[fleche] (L)--(LO);
+\draw[fleche] (L)--(LN);
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+\frametitle {Exemple de Variables}
+\begin{tikzpicture}
+\foreach \nom/\code/\n in {Age/a/1,Taille/b/2,Note/c/3,Pays/d/4,Couleur/f/6,{moyen de transport}/g/7,comportement/e/5}
+{\node[varType] (\code) at (0,-\n*1+3.5) {\n - \nom};}
+\node[varType] (QC) at (6,2) {Continues};
+\node[varType] (QD) at (6,1) {Discrètes};
+\node[varType] (LO) at (6,-1) {Ordinales};
+\node[varType] (LN) at (6,-2) {Nominales};\pause
+\draw[fleche] (a.east)--(QD.west);
+\draw[fleche] (b.east)--(QC.west);
+\draw[fleche] (c.east)--(QD.west);
+\draw[fleche] (d.east)--(LN.west);
+\draw[fleche] (f.east)--(LN.west);
+\draw[fleche] (g.east)--(LN.west);
+\draw[fleche] (e.east)--(LO.west);
+\end{tikzpicture}
+\end{frame}
+
+\end{document}
