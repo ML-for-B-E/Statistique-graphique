@@ -1,10 +1,10 @@
 # Graphic Statistics Course
 
-This is the Graphic Statistics course from _La Fondation Vallet_ et de _Benin Excellence_ `version 2023`
+This is the Graphic Statistics course from _La Fondation Vallet_ and _Benin Excellence_ `version 2023`
 
 ## About Notebooks
 
-The code in this repo shows simple curve plotting examples from the course. We assume in the following that you are in the directory ``notebooks``
+The code in this repo shows simple curve plotting examples from the course. 
 
 ### Setup:  your environment 
  Step `1`, `2`, `3`, and `4`should be run by everyone
@@ -14,7 +14,7 @@ The code in this repo shows simple curve plotting examples from the course. We a
 3. then run : ```git clone https://github.com/ML-for-B-E/Statistique-graphique.git```
 4. Move to the cloned repository:   ```cd Statistique-graphique```
 
-You can use either `venv` or `pipenv` to start your virtual env.
+We assume in the following that you are in the directory ``notebooks``. You can use either `venv` or `pipenv` to start your virtual env.
 
 #### Within venv
 
@@ -25,8 +25,6 @@ You can use either `venv` or `pipenv` to start your virtual env.
 - Start your notebook : ```jupyter-notebook```
 
 #### Within pipenv ``pipenv``
-
-- Use the following command to activate the virtual env: ```pipenv shell ```
 
 - Run the command: ```pipenv --python 3.8```
 
