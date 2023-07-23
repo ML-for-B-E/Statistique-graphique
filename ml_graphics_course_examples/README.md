@@ -2,7 +2,7 @@
 
 The code in this directory shows a simple curve plotting example from the course.
 
-# Setup 1:  your environment
+## Setup 1:  your environment
 
 - Install the correct version of Python: ```sudo apt-get install python3.8-dev```
 - Install python ``venv package``in your system: ```sudo apt install python3.8-venv```
@@ -10,7 +10,8 @@ The code in this directory shows a simple curve plotting example from the course
 - Run the command: ```python3.8 -m venv venv```
 - Activate the venv: ```source venv/bin/activate```
 - Upgrade pip: ```pip install --upgrade pip```
-- Install required packages: ```pip install -r requirements/dev.txt```
+- Install required packages: ```pip install -r requirements.txt```
+- Start your notebook : ```jupyter-notebook```
 
 ## Setup 2: Install and Run the Example using ``pipenv``
 
