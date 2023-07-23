@@ -1,6 +1,6 @@
 # Graphic Statistics Course
 
-This is the Graphic Statistics course from _La Fondation Vallet_ and _Benin Excellence_ `version 2023`
+This is the Graphic Statistics course from _La Fondation Vallet_ and _Benin Excellence_ `version EEIA2023`
 
 ## About Notebooks
 
@@ -35,7 +35,7 @@ We assume in the following that you are in the directory ``notebooks``. You can 
 - Finally, run the following to start your notebook:``` jupyter-notebook```
 
 
-- Once started, you should open ``Boxplot_Scatterplot.ipynb`` and ``ml_graphics_course.ipynb`` to test the example.
+- Once started, you should open ``Boxplot_Scatterplot.ipynb`` and ``ml_graphics_course.ipynb`` to test the examples.
 
 P.S.: ``pipenv`` utilities can be installed with ```pip install --user pipenv ```. More information about ``pipenv`` can be found [here](https://pipenv.pypa.io/en/latest/).
 
