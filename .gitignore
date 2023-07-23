@@ -2,3 +2,4 @@
 .ipy*
 .DS_Store  
 Pipfile* 
+.venv
